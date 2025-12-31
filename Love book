@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Forever Us ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{margin:0;height:100vh;display:flex;justify-content:center;align-items:center;
+background:linear-gradient(135deg,#ff758c,#ff7eb3);font-family:Georgia,serif;overflow:hidden;}
+.heart{position:absolute;bottom:-20px;animation:float 6s linear infinite;opacity:.7}
+@keyframes float{0%{transform:translateY(0);opacity:0}20%{opacity:1}100%{transform:translateY(-110vh);opacity:0}}
+.book{width:340px;height:460px;perspective:2000px}
+.page{width:100%;height:100%;position:absolute;background:#fffaf3;border-radius:14px;
+box-shadow:0 12px 30px rgba(0,0,0,.3);transform-origin:left;transition:1s;padding:22px}
+.cover{background:#b11226;color:#ffd9a0;display:flex;justify-content:center;align-items:center;
+flex-direction:column;text-align:center;z-index:5}
+.page1{z-index:4}.page2{z-index:3}.page3{z-index:2}.page4{z-index:1}
+h1,h2{text-align:center;color:#b11226}.cover h1{color:#ffd9a0}
+button{margin-top:12px;padding:8px 18px;border:none;background:#b11226;color:white;border-radius:20px}
+.open1 .cover{transform:rotateY(-180deg)}.open2 .page1{transform:rotateY(-180deg)}
+.open3 .page2{transform:rotateY(-180deg)}.open4 .page3{transform:rotateY(-180deg)}
+</style>
+</head>
+<body>
+
+<div class="book" id="book">
+<div class="page cover">
+<h1>🌹 For My Forever Love 🌹</h1>
+<p>Tap to open 💖</p>
+<button onclick="book.classList.add('open1')">Open</button>
+</div>
+
+<div class="page page1">
+<h2>Meri jaan,</h2>
+<p>Doori sirf faaslon ki hoti hai, pyaar kabhi kam nahi hota 💖</p>
+<button onclick="book.classList.add('open2')">Next</button>
+</div>
+
+<div class="page page2">
+<p>Tum meri aadat ho, meri mohabbat ho ❤️</p>
+<button onclick="book.classList.add('open3')">Next</button>
+</div>
+
+<div class="page page3">
+<p>Happy New Year meri zindagi 🎆</p>
+<button onclick="book.classList.add('open4')">Next</button>
+</div>
+
+<div class="page page4">
+<p><b>Forever Yours ♾️<br>Abhinav 💞</b></p>
+</div>
+</div>
+
+<script>
+setInterval(()=>{
+const h=document.createElement("div");
+h.className="heart";h.innerHTML="❤️";
+h.style.left=Math.random()*100+"vw";
+h.style.fontSize=(14+Math.random()*20)+"px";
+document.body.appendChild(h);
+setTimeout(()=>h.remove(),6000);
+},400);
+</script>
+
+</body>
+</html>
